@@ -1,0 +1,61 @@
+{
+    "plans": [
+      {
+        "name": "Caipirinhas",
+        "description": "Leaving Drinks",
+        "starting": "2018-04-13T10:00:00.000Z",
+        "finishing": "2018-04-13T11:00:00.000Z",
+        "location": "here",
+        "category": "Celebration",
+        "id": 3
+      },
+      {
+        "name": "Liquid",
+        "description": "Party time",
+        "starting": "2018-04-01T21:00:00.000Z",
+        "finishing": "2018-04-01T23:59:00.000Z",
+        "location": "dfgdfg",
+        "category": "Nightclub",
+        "id": 4
+      },
+      {
+        "name": "Go Ape",
+        "description": "Activity",
+        "starting": "2018-04-15T13:00:00.000Z",
+        "finishing": "2018-04-15T15:00:00.000Z",
+        "category": "Activity",
+        "location": "aqui",
+        "id": 5
+      },
+      {
+        "name": "Las Iguanas",
+        "description": "Restaurant",
+        "starting": "2018-04-20T17:00:00.000Z",
+        "finishing": "2018-04-20T19:00:00.000Z",
+        "category": "Restaurant",
+        "location": "dfsdfsdf",
+        "id": 6
+      }
+    ],
+    "categories": [
+      {
+        "id": 1,
+        "name": "Restaurant"
+      },
+      {
+        "id": 2,
+        "name": "Nightclub"
+      },
+      {
+        "id": 3,
+        "name": "Activity"
+      },
+      {
+        "id": 4,
+        "name": "Celebration"
+      }
+    ],
+    "profile": {
+      "name": "typicode"
+    }
+  }

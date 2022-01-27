@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Location</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let plan of myPlans">
+            <td>{{plan.name}}</td>
+            <td>{{plan.description}}</td>
+            <td>{{plan.location}}</td>
+            <td>{{plan.category}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>

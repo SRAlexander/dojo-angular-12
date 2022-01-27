@@ -1,0 +1,75 @@
+<div *ngIf="hasErrorOccurred">
+  <app-error-notification [message]="'An unknown error has occurred'" (dismissError)="onErrorDismissed()"></app-error-notification>
+</div>
+
+<form [formGroup]="newPlanForm" (ngSubmit)="onSubmit()">
+    <alert type="success" dismissOnTimeout="3000" *ngIf="submitted">
+        <strong>Yes!</strong> We have a plan.
+    </alert>
+
+    <div class="form-group">
+    <label for="name">
+      <b>Name</b>
+    </label>
+    <input id="name" type="text" formControlName="name" class="form-control" placeholder="" name="name" />
+    <span *ngIf="!newPlanForm.get('name')?.valid && newPlanForm.get('name')?.touched" class="error">Please enter a plan name</span>
+  </div>
+
+  <div class="form-group">
+    <label for="description">
+      <b>Description</b>
+    </label>
+    <input id="description" type="text" formControlName="description" class="form-control" placeholder="" name="description"
+    />
+    <span *ngIf="!newPlanForm.get('description')?.valid && newPlanForm.get('description')?.touched" class="error">Please enter a plan description</span>
+  </div>
+
+  <div class="form-group">
+    <label for="location">
+      <b>Location</b>
+    </label>
+    <input id="location" type="text" formControlName="location" class="form-control" placeholder="" name="location"
+    />
+    <span *ngIf="!newPlanForm.get('location')?.valid && newPlanForm.get('location')?.touched" class="error">Please enter a plan location</span>
+  </div>
+
+  <div class="form-group">
+    <label for="date">
+      <b>Date</b>
+    </label>
+    <input id="date" type="text" bsDatepicker formControlName="date" class="form-control" placeholder="" name="date" />
+    <span *ngIf="!newPlanForm.get('date')?.valid && newPlanForm.get('date')?.touched" class="error">Please enter a plan date</span>
+  </div>
+
+  <div class="form-group" ngClass="row">
+    <div class="col-md-6">
+      <label for="startingTime">
+        <b>Starting time</b>
+      </label>
+      <timepicker id="startingTime" formControlName="startingTime" name="startingTime"></timepicker>
+      <span *ngIf="!newPlanForm.get('startingTime')?.valid && newPlanForm.get('startingTime')?.touched" class="error">Please enter a plan date</span>
+    </div>
+    <div class="col-md-6">
+      <label for="finishingTime">
+        <b>Finishing time</b>
+      </label>
+      <timepicker id="finishingTime" formControlName="finishingTime" name="finishingTime"></timepicker>
+      <span *ngIf="!newPlanForm.get('finishingTime')?.valid && newPlanForm.get('finishingTime')?.touched" class="error">Please enter a plan date</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="category">
+      <b>Category</b>
+    </label>
+    <select id="category" type="text" formControlName="category" class="form-control" placeholder="" name="category">
+      <option *ngFor="let cat of categories" [value]="cat.name">{{ cat.name }}</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <button type="submit" class="btn btn-success btn-block" [disabled]="!newPlanForm.valid">Add Plan</button>
+    </div>
+  </div>
+</form>
